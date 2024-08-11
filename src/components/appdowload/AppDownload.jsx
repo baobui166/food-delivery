@@ -6,7 +6,7 @@ const cx = classNames.bind(styles);
 
 function AppDownload() {
   return (
-    <div className={cx("app-download")}>
+    <div className={cx("app-download")} id="mobile-app">
       <p>
         For Better Experience Download <br />
         Tomato App

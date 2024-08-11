@@ -6,6 +6,17 @@
 
   .logo {
     width: 15rem;
+
+    @media (max-width: 1050px) {
+      width: 14rem;
+    }
+    @media (max-width: 900px) {
+      width: 12rem;
+    }
+
+    @media (max-width: 750px) {
+      width: 12rem;
+    }
   }
 }
 
@@ -15,7 +26,22 @@
   gap: 2rem;
   color: #4955e7;
 
-  li {
+  @media (max-width: 1050px) {
+    gap: 2rem;
+    font-size: 1.7rem;
+  }
+
+  @media (max-width: 900px) {
+    gap: 1.5rem;
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 750px) {
+    display: none;
+  }
+
+  li,
+  a {
     list-style: none;
     font-size: 1.8rem;
     padding-bottom: 0.2rem;
@@ -28,12 +54,27 @@
   display: flex;
   align-items: center;
   gap: 4rem;
+  @media (max-width: 1050px) {
+    gap: 3rem;
+  }
+
+  @media (max-width: 90rem) {
+    gap: 2rem;
+  }
 
   img {
     width: 2rem;
     height: 2rem;
     object-fit: cover;
     cursor: pointer;
+
+    @media (max-width: 1050px) {
+      width: 2.2rem;
+    }
+
+    @media (max-width: 900px) {
+      width: 2rem;
+    }
   }
 
   button {
@@ -44,6 +85,15 @@
     font-size: 1.6rem;
     border: 1px solid tomato;
     transition: all 0.3s ease-out;
+
+    @media (max-width: 1050px) {
+      padding: 0.8rem 2.5rem;
+    }
+
+    @media (max-width: 900px) {
+      padding: 0.7rem 2rem;
+      font-size: 1.5rem;
+    }
 
     &:hover {
       background: #fff4f2;

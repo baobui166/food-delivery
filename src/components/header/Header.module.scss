@@ -16,6 +16,14 @@
     left: 6vw;
     animation: fadeIn 3s;
 
+    @media (max-width: 1050px) {
+      max-width: 45%;
+    }
+
+    @media (max-width: 750px) {
+      max-width: 65%;
+    }
+
     h2 {
       font-weight: 500;
       color: white;
@@ -24,6 +32,10 @@
     p {
       color: white;
       font-size: 1vw;
+
+      @media (max-width: 750px) {
+        display: none;
+      }
     }
 
     button {
@@ -33,6 +45,10 @@
       background-color: white;
       font-size: max(1vw, 1.3rem);
       border-radius: 2rem;
+
+      @media (max-width: 750px) {
+        padding: 2vw 4vw;
+      }
     }
   }
 }

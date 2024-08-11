@@ -11,6 +11,11 @@
   &-text {
     max-width: 60%;
     color: #808080;
+
+    @media (max-width: 1050px) {
+      max-width: 100%;
+      font-size: 1.4rem;
+    }
   }
 
   &-list {

@@ -8,6 +8,7 @@
   padding: 2rem 8vw;
   padding-top: 8rem;
   margin-top: 10rem;
+
   &-social-icons {
     img {
       width: 40px;
@@ -22,6 +23,12 @@
     background-color: gray;
     border: none;
   }
+
+  &-copyright {
+    @media (max-width: 750px) {
+      text-align: center;
+    }
+  }
 }
 
 .footer-content {
@@ -29,6 +36,10 @@
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 8rem;
+  @media (max-width: 750px) {
+    display: flex;
+    flex-direction: column;
+  }
 
   &-left,
   &-center,
