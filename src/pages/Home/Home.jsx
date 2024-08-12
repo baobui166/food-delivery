@@ -9,7 +9,8 @@ import AppDowload from "../../components/appdowload/AppDownload";
 const cx = classNames.bind(styles);
 
 const Home = () => {
-  const [category, setCategory] = useState("All");
+  const [category, setCategory, cartItem] = useState("All");
+  console.log(cartItem);
 
   return (
     <div className={cx("home")}>

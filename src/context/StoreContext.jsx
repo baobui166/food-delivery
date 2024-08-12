@@ -21,7 +21,10 @@ export const StoreContextProvider = ({ children }) => {
 
   const getTotalAmount = () => {
     let totalAmount = 0;
+
     for (const itemId in cartItem) {
+      console.log(cartItem[itemId]);
+
       if (cartItem[itemId] > 0) {
         let itemInfo = food_list.find((food) => food._id === parseInt(itemId));
         if (itemInfo) {
@@ -43,6 +46,14 @@ export const StoreContextProvider = ({ children }) => {
     return totalItem;
   };
 
+  const btnPay = () => {
+    for (const item in cartItem) {
+      if (cartItem[item] > 0) {
+        setCartItem((pre) => ({ ...pre, [item]: 0 }));
+      }
+    }
+  };
+
   const contextValue = {
     food_list,
     cartItem,
@@ -51,6 +62,7 @@ export const StoreContextProvider = ({ children }) => {
     removeFromCart,
     getTotalAmount,
     getItemFromCart,
+    btnPay,
   };
 
   return (
